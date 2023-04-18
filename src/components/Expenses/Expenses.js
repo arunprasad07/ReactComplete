@@ -2,6 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import Card from "../UI/Card";
 import NewExpense from "../NewExpense/NewExpense";
+import ExpenseFilter from "./ExpenseFilter";
 
 function Expenses(props) {
   const expenses = [
@@ -26,9 +27,17 @@ function Expenses(props) {
       date: new Date(),
     },
   ];
+
+  const filterChangeHandler = (selectedYear) => {
+    console.log(selectedYear);
+  };
+
   return (
     <div>
       <NewExpense />
+      <div className="expenses-filter">
+        <ExpenseFilter onFilterChange={filterChangeHandler} />
+      </div>
       <Card className="expenses">
         <ExpenseItem
           title={expenses[0].title}

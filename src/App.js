@@ -1,7 +1,7 @@
-import ExpenseItem from "./components/Features/ExpenseItem";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 import "./styles.css";
-import "./components/Features/Expenses.css";
-import Expenses from "./components/Features/Expenses";
+import "./components/Expenses/Expenses.css";
+import Expenses from "./components/Expenses/Expenses";
 
 export default function App() {
   return (
